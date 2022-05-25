@@ -1,12 +1,19 @@
 {
-  "name": "1-string-lib",
+  "name": "string-lib-1",
   "version": "1.0.0",
-  "description": "",
+  "description": "A simple JavaScript library to manipulate strings",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "tsc src/index.ts && node src/index.js"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "author": "Stan Jeong",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^17.0.35",
+    "@typescript-eslint/eslint-plugin": "^5.26.0",
+    "@typescript-eslint/parser": "^5.26.0",
+    "eslint": "^8.16.0"
+  }
 }
