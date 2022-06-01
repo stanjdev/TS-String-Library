@@ -1,4 +1,6 @@
 var capitalize = function (str) {
+    if (str === "")
+        return str;
     return str[0].toUpperCase() + str.slice(1);
 };
 var allCaps = function (str) {
@@ -30,15 +32,6 @@ var makeHashTag = function (str) {
 var isEmpty = function (str) {
     return str.trim().length === 0;
 };
-// console.log(capitalize('hello world'));
-// console.log(allCaps('hello world'));
-// console.log(capitalizeWords('hello world'))
-// console.log(kebobCase("   Hello    world!  buttons  "));
-// console.log(snakeCase("   Hello    world!  buttons  "));
-// console.log(camelCase("   Hello    world!  buttons  "));
-// console.log(shift("Hello world!"));
-// console.log(makeHashTag("Amazing bongo drums for sale"));
-// console.log(isEmpty(`   `));
 module.exports = {
     capitalize: capitalize,
     allCaps: allCaps,

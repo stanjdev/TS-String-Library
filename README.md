@@ -1,40 +1,74 @@
-# TS String Library
+# TS-JS String Manipulation Library
 
 ![npm](https://img.shields.io/npm/v/string-lib-1)
 ![npm bundle size](https://img.shields.io/bundlephobia/min/string-lib-1)
 
+A simple JavaScript library to manipulate strings.
+
+## Installation
+
+Use the package manager [npm](https://docs.npmjs.com/cli/v8/commands/npm) to install.
+
+```bash
+npm i string-lib-1
+```
+
 [Link to npm library](https://www.npmjs.com/package/string-lib-1)
 
-## Example Usage
+## Usage
 
 ```ts
-capitalize('hello world');
--> "Hello world"
+const stringLib = require("string-lib-1");
 
-allCaps('foo bar');
- -> "FOO BAR"
+stringLib.capitalize('hello world');
+// returns "Hello world"
 
-capitalizeWords('hello world');
--> "Hello World"
+stringLib.allCaps('foo bar');
+// returns "FOO BAR"
 
-removeExtraSpaces("   Hello    world!  buttons  ");
--> "hello world! buttons"
+stringLib.capitalizeWords('hello world');
+// returns "Hello World"
 
-kebobCase("   Hello    world!  buttons  ");
--> "hello-world-buttons"
+stringLib.removeExtraSpaces("   Hello    world!  buttons  ");
+// returns "hello world! buttons"
 
-snakeCase("   Hello    world!  buttons  ");
--> "hello_world_buttons"
+stringLib.kebobCase("   Hello    world!  buttons  ");
+// returns "hello-world-buttons"
 
-camelCase("   Hello    world!  buttons  ");
--> "helloWorldButtons"
+stringLib.snakeCase("   Hello    world!  buttons  ");
+// returns "hello_world_buttons"
 
-shift("Hello world!");
--> "ello world!H"
+stringLib.camelCase("   Hello    world!  buttons  ");
+// returns "helloWorldButtons"
 
-makeHashTag("Amazing bongo drums for sale");
--> ['#amazing', '#bongo', '#drums']
+stringLib.shift("Hello world!");
+// returns "ello world!H"
 
-isEmpty(`   `);
--> true
+stringLib.makeHashTag("Amazing bongo drums for sale");
+// returns ['#amazing', '#bongo', '#drums']
+
+stringLib.isEmpty(`   `);
+// returns true
 ```
+
+## Contributing
+
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+Please make sure to update tests as appropriate.
+
+To run tests:
+
+```bash
+npm test
+```
+
+To check code test coverage:
+
+```bash
+npx jest --coverage
+```
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
