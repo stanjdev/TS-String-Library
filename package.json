@@ -1,8 +1,8 @@
 {
   "name": "string-lib-1",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A simple JavaScript library to manipulate strings",
-  "main": "index.js",
+  "main": "/src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "tsc src/index.ts && node src/index.js"

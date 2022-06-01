@@ -1,6 +1,8 @@
 # TS String Library
 
-[Link to npm library](npm.com)
+![npm bundle size](https://img.shields.io/bundlephobia/min/string-lib-1)
+
+[Link to npm library](https://www.npmjs.com/package/string-lib-1)
 
 ## Example Usage
 
