@@ -1,5 +1,6 @@
 # TS String Library
 
+![npm](https://img.shields.io/npm/v/string-lib-1)
 ![npm bundle size](https://img.shields.io/bundlephobia/min/string-lib-1)
 
 [Link to npm library](https://www.npmjs.com/package/string-lib-1)
