@@ -26,8 +26,9 @@ var shift = function (str, shiftBy) {
     if (shiftBy === void 0) { shiftBy = 1; }
     return str.slice(shiftBy) + str.slice(0, shiftBy);
 };
-var makeHashTag = function (str) {
-    return removeExtraSpaces(str).split(" ").sort(function (a, b) { return b.length - a.length; }).slice(0, 3).map(function (word) { return "#" + word.toLowerCase(); });
+var makeHashTag = function (str, numOfWords) {
+    if (numOfWords === void 0) { numOfWords = str.length; }
+    return removeExtraSpaces(str).split(" ").sort(function (a, b) { return b.length - a.length; }).slice(0, numOfWords).map(function (word) { return "#" + word.toLowerCase(); });
 };
 var isEmpty = function (str) {
     return str.trim().length === 0;

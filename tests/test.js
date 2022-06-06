@@ -1,9 +1,13 @@
 /* eslint-disable no-undef */
 /* eslint-disable @typescript-eslint/no-var-requires */
-const stringLib = require("../src/index.js");
+const stringLib = require('../src/index.js');
 
 test('Capitalize capitalizes the first letter of a word', () => {
   expect(stringLib.capitalize('hello world')).toBe('Hello world');
+  expect(stringLib.capitalize('WORLD')).toBe('WORLD');
+});
+
+test('Capitalize capitalizes the first letter of a word, even if it was already capitalized', () => {
   expect(stringLib.capitalize('Hello')).toBe('Hello');
   expect(stringLib.capitalize('WORLD')).toBe('WORLD');
 });
@@ -59,8 +63,13 @@ test('shift takes a number of letters at the start of a string and shifts them t
   expect(stringLib.shift('Hello world!', 3)).toBe('lo world!Hel');
 });
 
-test('makeHashTag returns an array of the 3 longest words of a given string, with a \'#\' prepended to them', () => {
-  expect(stringLib.makeHashTag("Amazing bongo drums for sale")).toEqual(['#amazing', '#bongo', '#drums']);
+test('makeHashTag returns an array of the longest words of a given string, with a \'#\' prepended to them', () => {
+  expect(stringLib.makeHashTag('Amazing bongo drums for sale')).toEqual(['#amazing', '#bongo', '#drums', '#sale', '#for']);
+  expect(stringLib.makeHashTag('Amazing bongo drums for sale', 3)).toEqual(['#amazing', '#bongo', '#drums']);
+});
+
+test('makeHashTag returns an empty array if no an empty string was passed in', () => {
+  expect(stringLib.makeHashTag('')).toEqual([]);
 });
 
 test('isEmpty returns a boolean of whether an inputted string is empty or not', () => {

@@ -32,8 +32,8 @@ const shift = (str: string, shiftBy = 1): string => {
   return str.slice(shiftBy) + str.slice(0, shiftBy);
 };
 
-const makeHashTag = (str: string): string[] => {
-  return removeExtraSpaces(str).split(" ").sort((a: string, b: string) => b.length - a.length).slice(0, 3).map((word: string) => "#" + word.toLowerCase());
+const makeHashTag = (str: string, numOfWords: number = str.length): string[] => {
+  return removeExtraSpaces(str).split(" ").sort((a: string, b: string) => b.length - a.length).slice(0, numOfWords).map((word: string) => "#" + word.toLowerCase());
 };
 
 const isEmpty = (str: string): boolean => {
